@@ -1,0 +1,14 @@
+customer_id,name,age,email,purchase_date,amount,category,status,loyalty_points
+1001,John Smith,35,john.smith@email.com,2023-12-15,150.50,Electronics,Active,500
+1002,Jane Doe,,jane.doe@email,2023-12-16,75.25,Clothing,Active,250
+1003,Bob Wilson,42,bob.wilson@email.com,2023-12-17,200.00,Electronics,Inactive,750
+1003,Bob Wilson,42,bob.wilson@email.com,2023-12-17,200.00,Electronics,Inactive,750
+1004,Alice Brown,-5,alice@incomplete,2023-13-45,99999.99,Food,Active,100
+1005,Charlie Davis,29,,2023-12-19,120.75,Clothing,Active,
+1006,Eva Green,31,eva.green@email.com,2023-12-20,-50.25,Electronics,Active,300
+1007,Frank Miller,0,frank@,2023-12-21,85.50,Food,,450
+1008,Grace Lee,36,grace.lee@email.com,2023-12-22,95.00,Clothing,Active,600
+1009,,45,david.wang@email.com,2023-12-23,180.25,Electronics,Active,800
+1010,Helen Wilson,39,helen.wilson@email.com,2023/12/24,135.75,Food,Active,550
+1011,Ian Cooper,41,ian.cooper@email.com,2023-12-25,2000.00,Electronics,Active,700
+1012,Julia Smith,28,julia.smith@email.com,2023-12-26,110.50,Clothing,Active,400

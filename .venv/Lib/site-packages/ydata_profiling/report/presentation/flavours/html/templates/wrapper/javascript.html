@@ -1,0 +1,18 @@
+{% if offline %}
+    {% if inline %}
+        <script>
+        {% include 'wrapper/assets/bootstrap.bundle.min.js' %}
+        </script>
+        <script>
+        {% include 'wrapper/assets/script.js' %}
+        </script>
+    {% else %}
+        <script src="{{ assets_prefix }}/js/bootstrap.bundle.min.js"></script>
+        <script src="{{ assets_prefix }}/js/script.js"></script>
+    {% endif %}
+{% else %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script>
+    {% include 'wrapper/assets/script.js' %}
+    </script>
+{% endif %}

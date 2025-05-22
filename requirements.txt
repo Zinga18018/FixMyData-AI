@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+python-multipart
+pandas
+ydata-profiling
+requests
+streamlit
+numpy
+tenacity

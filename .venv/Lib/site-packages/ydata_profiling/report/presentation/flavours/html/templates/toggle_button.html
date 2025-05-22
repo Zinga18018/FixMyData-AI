@@ -1,0 +1,18 @@
+{% if anchor_id != 'toggle-correlation-description' %}
+    <div class="col-sm-12 text-end">
+        <button class="btn btn-light"
+                data-bs-toggle="collapse"
+                data-bs-target="#bottom-{{ anchor_id }}, #minifreqtable{{ anchor_id }}"
+                aria-expanded="true"
+                aria-controls="#bottom-{{ anchor_id }}, #minifreqtable{{ anchor_id }}">
+            {{ text }}
+        </button>
+    </div>
+{% else %}
+    <button id="{{ anchor_id }}"
+            class="btn btn-light"
+            style="float: right"
+            data-bs-toggle="collapse">
+        {{ text }}
+    </button>
+{% endif %}

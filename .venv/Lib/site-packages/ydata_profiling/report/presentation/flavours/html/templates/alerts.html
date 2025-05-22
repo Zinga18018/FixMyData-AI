@@ -1,0 +1,47 @@
+<div class="col-sm-12">
+    <table class="table table-striped">
+        <p class="h4 item-header">Alerts</p>
+        {% if alerts is mapping %}
+            <thead>
+                <tr>
+                    {% for index in range(style._labels | length) %}
+                        <th style="color: {{ style.primary_colors[index] }};">{{ style._labels[index] }}</th>
+                    {% endfor %}
+                    <th></th>
+                </tr>
+            </thead>
+            {% for key, value in alerts.items() %}
+                {% set a = value | first %}
+                {% if a.alert_type.name != "REJECTED" %}
+                    <tr>
+                        {% for alert in value %}
+                            <td>
+                                {% if not alert._is_empty %}
+                                    {% include 'alerts/alert_' + alert.alert_type.name | lower  + '.html'  %}
+                                {% else %}
+                                    <em>Alert not present in this dataset</em>
+                                {% endif %}
+                            </td>
+                        {% endfor %}
+                        <td>
+                            <span class="badge text-bg-{{ styles[a.alert_type.name | lower] }}">{{ a.alert_type_name | replace("_", " ") | capitalize }}</span>
+                        </td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            {% for alert in alerts %}
+                {% if alert.alert_type.name != "REJECTED" %}
+                    <tr>
+                        <td>
+                            {% include 'alerts/alert_' + alert.alert_type.name | lower  + '.html'  %}
+                        </td>
+                        <td>
+                            <span class="badge text-bg-{{ styles[alert.alert_type.name | lower] }}">{{ alert.alert_type.name | replace("_", " ") | capitalize }}</span>
+                        </td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    </table>
+</div>
